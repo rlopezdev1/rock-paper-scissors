@@ -19,42 +19,48 @@
 make your function case insensitive (so users can input rock, ROCK, RocK or any other variation)
  */
 
-      function playRound(playerSelection, computerSelection) {
-            let player= playerSelection.toUpperCase();
+      function playRound(computerSelection) {
+            let playerSelection =  prompt("Enter your selection!(Rock, Paper or Scissors")
+            let player = playerSelection.toUpperCase();
             let computer = computerSelection.toUpperCase();
 
             if(player === computer){
-                return "DRAW";
+                return "DRAW * You both selected " + playerSelection.toLowerCase() + " * DRAW";
             }
 
             switch(player) { 
                 case "ROCK":
                     if(computer === "SCISSORS"){
-                        return "You Win! Rock beats scissors"
+                        return "You chose Rock\nComputer chose " + computer.toLowerCase() + "\nWin! Rock beats scissors\n"
                     } else{
-                        return "You Lose! " + computer + " beats Rock"
+                        return "Computer chose " + computer.toLowerCase() + "\nYou Lose! " + computer + " beats Rock\n"
                     }
                 break;
                 case "PAPER":
                     if(computer === "ROCK"){
-                        return "You Win! Paper beats Rock"
+                        return "You Chose Paper\nComputer chose " + computer.toLowerCase() + "\nYou Win! Paper beats Rock\n"
                     } else{
-                        return "You Lose! " + computer + " beats Paper"
+                        return "Computer chose " + computer.toLowerCase() + "\nYou Lose! " + computer + " beats Paper\n"
                     }
                 break;
                 case "SCISSORS":
                     if(computer === "PAPER"){
-                        return "You Win! Scissors beats Paper"
+                        return "You Chose\nComputer chose " + computer.toLowerCase() + "\nYou Win! Scissors beats Paper\n"
                     } else{
-                        return "You Lose! " + computer + " beats Scissors"
+                        return "Computer chose " + computer.toLowerCase() + "\nYou Lose! " + computer + " beats Scissors\n"
                     }
                 break;
                 default:
-                console.log("ERROR");
+                console.log("ERROR\n");
             }
-    
+      }
 
-            
+      function game() {
+                console.log(playRound(computerPlay()))
+                console.log(playRound(computerPlay()))
+                console.log(playRound(computerPlay()))
+                console.log(playRound(computerPlay()))
+                console.log(playRound(computerPlay()))
       }
 
   </script>
