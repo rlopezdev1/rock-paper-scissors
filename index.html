@@ -1,10 +1,5 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>Page Title</title>
-  <meta charset="UTF-8"/>
-</head>
-<body>
   <script>
 
       let computerOptions = ["Rock", "Paper", "Scissors"];
@@ -14,10 +9,7 @@
                 return randomChoice;
       }
 
-      /* 
-      Write a function that plays a single round of Rock Paper Scissors. The function should take two parameters - the playerSelection and computerSelection - and then return a string that declares the winner of the round like so: "You Lose! Paper beats Rock"
-make your function case insensitive (so users can input rock, ROCK, RocK or any other variation)
- */
+    
 
       function playRound(computerSelection) {
             let playerSelection =  prompt("Enter your selection!(Rock, Paper or Scissors")
@@ -62,7 +54,6 @@ make your function case insensitive (so users can input rock, ROCK, RocK or any 
                 console.log(playRound(computerPlay()))
                 console.log(playRound(computerPlay()))
       }
-
+      game();
   </script>
-</body>
 </html>
